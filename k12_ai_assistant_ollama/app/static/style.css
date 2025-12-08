@@ -1,0 +1,983 @@
+/* Custom CSS for K-12 AI Assistant */
+
+/* Main theme colors - Dark theme */
+:root {
+    --primary-color: #1f77b4;
+    --secondary-color: #2196F3;
+    --accent-color: #FF9800;
+    --background-color: #0e1117;
+    --text-color: #fafafa;
+    --light-gray: #262730;
+    --border-color: #3b3b3b;
+}
+
+/* Fix Streamlit header/banner - dark theme */
+header[data-testid="stHeader"],
+[data-testid="stHeader"],
+.stApp > header {
+    background-color: var(--secondaryBackgroundColor) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Fix Streamlit header elements - ensure text is visible */
+header[data-testid="stHeader"] *,
+[data-testid="stHeader"] *,
+.stApp > header * {
+    color: var(--textColor) !important;
+}
+
+/* Fix Streamlit menu button (hamburger menu) */
+[data-testid="stHeader"] button,
+header button,
+[data-testid="stHeader"] [data-baseweb="button"] {
+    color: var(--textColor) !important;
+    background-color: transparent !important;
+}
+
+/* Fix Streamlit header decorations */
+[data-testid="stDecoration"] {
+    display: none !important;
+}
+
+/* Hide Streamlit default header decoration/background */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+/* Fix any Streamlit banner elements */
+[data-baseweb="banner"],
+.stBanner,
+.stBanner * {
+    background-color: var(--secondaryBackgroundColor) !important;
+    color: var(--textColor) !important;
+}
+
+/* Main app background */
+.stApp {
+    background-color: #0e1117 !important;
+}
+
+/* Ensure main content area text is visible */
+.main .block-container {
+    color: #fafafa !important;
+    background-color: #0e1117 !important;
+}
+
+/* General text styling for main content */
+.stApp > div,
+.stApp p,
+.stApp div,
+.stApp span,
+.stApp h1,
+.stApp h2,
+.stApp h3,
+.stApp h4,
+.stApp h5,
+.stApp h6 {
+    color: #fafafa !important;
+}
+
+/* Streamlit main content area */
+[data-testid="stAppViewContainer"] {
+    color: #fafafa !important;
+    background-color: #0e1117 !important;
+}
+
+/* All Streamlit text elements */
+.stMarkdown,
+.stText,
+.stAlert,
+.stSuccess,
+.stInfo,
+.stWarning,
+.stError {
+    color: #fafafa !important;
+}
+
+/* Streamlit headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #fafafa !important;
+}
+
+/* Text input labels */
+.stTextInput > label,
+.stTextArea > label,
+.stSelectbox > label,
+.stSlider > label,
+.stRadio > label,
+.stCheckbox > label,
+.stNumberInput > label {
+    color: #fafafa !important;
+}
+
+/* Text input and textarea text */
+.stTextInput input,
+.stTextArea textarea {
+    color: var(--textColor) !important;
+    background-color: var(--secondaryBackgroundColor) !important;
+}
+
+/* Selectbox - main element - Dark theme */
+.stSelectbox select {
+    color: #fafafa !important;
+    background-color: #262730 !important;
+    border: 2px solid #1f77b4 !important;
+    border-radius: 4px !important;
+}
+
+.stSelectbox select:focus,
+.stSelectbox select:hover {
+    border-color: #1f77b4 !important;
+    box-shadow: 0 0 0 3px rgba(31, 119, 180, 0.2) !important;
+    outline: none !important;
+    background-color: #262730 !important;
+}
+
+/* Selectbox dropdown menu - this is the popup menu - Dark theme */
+.stSelectbox [data-baseweb="select"] {
+    color: #fafafa !important;
+    background-color: #262730 !important;
+    border: 2px solid #1f77b4 !important;
+    border-radius: 4px !important;
+}
+
+/* Selectbox border and focus state - Blue */
+.stSelectbox [data-baseweb="select"]:focus,
+.stSelectbox [data-baseweb="select"]:focus-within,
+.stSelectbox [data-baseweb="select"]:hover {
+    border-color: #1f77b4 !important;
+    box-shadow: 0 0 0 3px rgba(31, 119, 180, 0.2) !important;
+    outline: none !important;
+    background-color: #262730 !important;
+}
+
+/* Dropdown arrow/icon - Blue */
+.stSelectbox [data-baseweb="select"] svg,
+.stSelectbox [data-baseweb="select"] path {
+    fill: #1f77b4 !important;
+    color: #1f77b4 !important;
+}
+
+/* Selected value text in dropdown - Blue */
+.stSelectbox [data-baseweb="select"] > div > div,
+.stSelectbox [data-baseweb="select"] span,
+.stSelectbox [data-baseweb="select"] p {
+    color: #1f77b4 !important;
+}
+
+/* Selectbox dropdown menu options container - Dark theme */
+.stSelectbox [data-baseweb="popover"],
+.stSelectbox [data-baseweb="popover"] > div,
+.stSelectbox [data-baseweb="popover"] > div > div {
+    background-color: #262730 !important;
+    color: #fafafa !important;
+    border: 1px solid #1f77b4 !important;
+    border-radius: 4px !important;
+}
+
+/* Selectbox dropdown menu items - Dark theme with light text */
+.stSelectbox [data-baseweb="popover"] li,
+.stSelectbox [data-baseweb="popover"] [role="option"],
+.stSelectbox [data-baseweb="popover"] li *,
+.stSelectbox [data-baseweb="popover"] [role="option"] *,
+.stSelectbox [data-baseweb="menu"] li,
+.stSelectbox [data-baseweb="menu"] [role="option"],
+.stSelectbox [data-baseweb="menu"] li *,
+.stSelectbox [data-baseweb="menu"] [role="option"] * {
+    background-color: #262730 !important;
+    color: #fafafa !important;
+}
+
+/* Default option text - Blue when matches selected */
+.stSelectbox [data-baseweb="popover"] li[data-highlighted="true"],
+.stSelectbox [data-baseweb="menu"] li[data-highlighted="true"] {
+    background-color: rgba(31, 119, 180, 0.3) !important;
+    color: #1f77b4 !important;
+}
+
+/* Selectbox dropdown menu items on hover - Blue highlight on dark */
+.stSelectbox [data-baseweb="popover"] li:hover,
+.stSelectbox [data-baseweb="popover"] [role="option"]:hover,
+.stSelectbox [data-baseweb="popover"] li:hover *,
+.stSelectbox [data-baseweb="popover"] [role="option"]:hover *,
+.stSelectbox [data-baseweb="menu"] li:hover,
+.stSelectbox [data-baseweb="menu"] [role="option"]:hover,
+.stSelectbox [data-baseweb="menu"] li:hover *,
+.stSelectbox [data-baseweb="menu"] [role="option"]:hover * {
+    background-color: rgba(31, 119, 180, 0.3) !important;
+    color: #1f77b4 !important;
+}
+
+/* Selected option in dropdown - Blue background on dark */
+.stSelectbox [data-baseweb="popover"] li[aria-selected="true"],
+.stSelectbox [data-baseweb="popover"] [role="option"][aria-selected="true"],
+.stSelectbox [data-baseweb="menu"] li[aria-selected="true"],
+.stSelectbox [data-baseweb="menu"] [role="option"][aria-selected="true"] {
+    background-color: rgba(31, 119, 180, 0.4) !important;
+    color: #1f77b4 !important;
+}
+
+/* Radio button labels */
+.stRadio label {
+    color: #fafafa !important;
+}
+
+/* Radio button styling - Blue color - Maximum override */
+.stRadio input[type="radio"],
+input[type="radio"],
+.stRadio [data-baseweb="radio"] input,
+[data-baseweb="radio"] input {
+    accent-color: #1f77b4 !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border-color: #1f77b4 !important;
+}
+
+.stRadio input[type="radio"]:checked,
+input[type="radio"]:checked,
+.stRadio [data-baseweb="radio"] input:checked,
+[data-baseweb="radio"] input:checked {
+    accent-color: #1f77b4 !important;
+    border-color: #1f77b4 !important;
+    background-color: transparent !important;
+}
+
+/* Radio button BaseWeb component - Blue color - All states */
+.stRadio [data-baseweb="radio"],
+[data-baseweb="radio"],
+.stRadio [data-baseweb="radio"] *,
+[data-baseweb="radio"] * {
+    color: #1f77b4 !important;
+    border-color: #1f77b4 !important;
+}
+
+/* Radio button circle/dot - Force blue */
+.stRadio [data-baseweb="radio"] > div,
+[data-baseweb="radio"] > div,
+.stRadio [data-baseweb="radio"] > span,
+[data-baseweb="radio"] > span {
+    background-color: transparent !important;
+    border-color: #1f77b4 !important;
+    color: #1f77b4 !important;
+}
+
+/* Radio button selected state - Blue circle - Multiple selectors */
+.stRadio [data-baseweb="radio"] input[type="radio"]:checked + span,
+.stRadio [data-baseweb="radio"] input[type="radio"]:checked + div,
+.stRadio input[type="radio"]:checked + label span,
+.stRadio label input[type="radio"]:checked + span,
+[data-baseweb="radio"] input[type="radio"]:checked + span,
+[data-baseweb="radio"] input[type="radio"]:checked + div,
+.stRadio [data-baseweb="radio"][aria-checked="true"],
+[data-baseweb="radio"][aria-checked="true"] {
+    background-color: #1f77b4 !important;
+    border-color: #1f77b4 !important;
+    color: #1f77b4 !important;
+}
+
+/* Radio button inner dot when selected - Multiple pseudo-elements */
+.stRadio [data-baseweb="radio"] input[type="radio"]:checked::before,
+.stRadio input[type="radio"]:checked::before,
+[data-baseweb="radio"] input[type="radio"]:checked::before,
+input[type="radio"]:checked::before,
+.stRadio [data-baseweb="radio"] input[type="radio"]:checked::after,
+.stRadio input[type="radio"]:checked::after,
+[data-baseweb="radio"] input[type="radio"]:checked::after,
+input[type="radio"]:checked::after {
+    background-color: #1f77b4 !important;
+    border-color: #1f77b4 !important;
+    color: #1f77b4 !important;
+}
+
+/* Radio button outer ring when selected */
+.stRadio [data-baseweb="radio"] input[type="radio"]:checked,
+.stRadio input[type="radio"]:checked,
+[data-baseweb="radio"] input[type="radio"]:checked,
+input[type="radio"]:checked,
+.stRadio [data-baseweb="radio"] input[type="radio"],
+.stRadio input[type="radio"],
+[data-baseweb="radio"] input[type="radio"] {
+    border-color: #1f77b4 !important;
+    background-color: transparent !important;
+    accent-color: #1f77b4 !important;
+}
+
+/* Radio button hover state */
+.stRadio [data-baseweb="radio"]:hover,
+[data-baseweb="radio"]:hover,
+.stRadio [data-baseweb="radio"]:hover *,
+[data-baseweb="radio"]:hover * {
+    border-color: #1f77b4 !important;
+    color: #1f77b4 !important;
+}
+
+/* Force blue color on all radio button SVG and path elements */
+.stRadio [data-baseweb="radio"] svg,
+[data-baseweb="radio"] svg,
+.stRadio [data-baseweb="radio"] path,
+[data-baseweb="radio"] path,
+.stRadio [data-baseweb="radio"] circle,
+[data-baseweb="radio"] circle,
+.stRadio svg,
+.stRadio path,
+.stRadio circle {
+    fill: #1f77b4 !important;
+    color: #1f77b4 !important;
+    stroke: #1f77b4 !important;
+}
+
+/* Override any inline styles on radio buttons */
+.stRadio [data-baseweb="radio"][style*="color"],
+[data-baseweb="radio"][style*="color"],
+.stRadio [data-baseweb="radio"][style*="fill"],
+[data-baseweb="radio"][style*="fill"],
+.stRadio [data-baseweb="radio"][style*="stroke"],
+[data-baseweb="radio"][style*="stroke"] {
+    color: #1f77b4 !important;
+    fill: #1f77b4 !important;
+    stroke: #1f77b4 !important;
+}
+
+/* Checkbox labels */
+.stCheckbox label {
+    color: #fafafa !important;
+}
+
+/* Checkbox styling - Blue color */
+.stCheckbox input[type="checkbox"] {
+    accent-color: #1f77b4 !important;
+}
+
+.stCheckbox input[type="checkbox"]:checked {
+    accent-color: #1f77b4 !important;
+    background-color: #1f77b4 !important;
+    border-color: #1f77b4 !important;
+}
+
+/* Generic dropdown/styled select styling - Dark theme */
+[data-baseweb="select"] {
+    color: #fafafa !important;
+    background-color: #262730 !important;
+    border: 2px solid #1f77b4 !important;
+    border-radius: 4px !important;
+}
+
+[data-baseweb="select"] > div {
+    color: #fafafa !important;
+    background-color: #262730 !important;
+}
+
+[data-baseweb="select"] input {
+    color: #fafafa !important;
+    background-color: #262730 !important;
+}
+
+[data-baseweb="select"] span,
+[data-baseweb="select"] div,
+[data-baseweb="select"] p {
+    color: #1f77b4 !important;
+}
+
+/* Dropdown arrow/icon - Blue */
+[data-baseweb="select"] svg,
+[data-baseweb="select"] path {
+    fill: #1f77b4 !important;
+    color: #1f77b4 !important;
+}
+
+/* Dropdown focus and hover - Blue border */
+[data-baseweb="select"]:focus,
+[data-baseweb="select"]:focus-within,
+[data-baseweb="select"]:hover {
+    border-color: #1f77b4 !important;
+    box-shadow: 0 0 0 3px rgba(31, 119, 180, 0.2) !important;
+    outline: none !important;
+    background-color: #262730 !important;
+}
+
+/* Ensure all text in select dropdowns is visible */
+.stSelectbox [data-baseweb="popover"] *,
+.stSelectbox [data-baseweb="menu"] * {
+    color: #333333 !important;
+}
+
+/* Specific styling for list items in dropdowns */
+li[role="option"],
+li[data-baseweb="option"],
+li[data-option-id] {
+    background-color: white !important;
+    color: #333333 !important;
+}
+
+li[role="option"] *,
+li[data-baseweb="option"] *,
+li[data-option-id] * {
+    color: #333333 !important;
+}
+
+li[role="option"]:hover,
+li[data-baseweb="option"]:hover,
+li[data-option-id]:hover {
+    background-color: rgba(31, 119, 180, 0.1) !important;
+    color: #1f77b4 !important;
+}
+
+li[role="option"]:hover *,
+li[data-baseweb="option"]:hover *,
+li[data-option-id]:hover * {
+    color: #1f77b4 !important;
+}
+
+/* Selected option in dropdown - Blue */
+li[role="option"][aria-selected="true"],
+li[data-baseweb="option"][aria-selected="true"],
+li[data-option-id][aria-selected="true"] {
+    background-color: rgba(31, 119, 180, 0.2) !important;
+    color: #1f77b4 !important;
+}
+
+/* Header styling */
+.main-header {
+    background-color: var(--primaryColor);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Card styling */
+.content-card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--secondaryBackgroundColor);
+    color: var(--textColor) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.content-card * {
+    color: var(--text-color) !important;
+}
+
+.content-card p,
+.content-card div,
+.content-card span {
+    color: var(--text-color) !important;
+}
+
+.content-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Button styling */
+.stButton > button {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    border: none;
+}
+
+.stButton > button:hover {
+    background-color: #1565a0 !important;
+    color: white !important;
+    transition: background-color 0.3s ease;
+}
+
+/* Success, info, warning, error messages */
+.stSuccess {
+    background-color: #d4edda !important;
+    color: #155724 !important;
+    border-color: #c3e6cb !important;
+}
+
+.stInfo {
+    background-color: #d1ecf1 !important;
+    color: #0c5460 !important;
+    border-color: #bee5eb !important;
+}
+
+.stWarning {
+    background-color: #fff3cd !important;
+    color: #856404 !important;
+    border-color: #ffeaa7 !important;
+}
+
+.stError {
+    background-color: #f8d7da !important;
+    color: #721c24 !important;
+    border-color: #f5c6cb !important;
+}
+
+/* Download button styling */
+.stDownloadButton > button {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    border: none;
+}
+
+.stDownloadButton > button:hover {
+    background-color: #0c7cd5;
+    transition: background-color 0.3s ease;
+}
+
+/* Tab styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 1rem;
+    background-color: transparent;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 3rem;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 5px 5px 0 0;
+    color: var(--textColor) !important;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background-color: var(--light-gray);
+    color: var(--textColor) !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: transparent !important;
+    color: var(--textColor) !important;
+    border-bottom: 3px solid var(--primary-color) !important;
+}
+
+.stTabs [aria-selected="true"] * {
+    color: var(--textColor) !important;
+}
+
+/* Tab content */
+.stTabs [data-baseweb="tab-panel"] {
+    color: #fafafa !important;
+}
+
+/* Sidebar styling - match main screen background */
+[data-testid="stSidebar"] {
+    background-color: #262730 !important;
+    padding: 1rem;
+    color: #fafafa !important;
+}
+
+/* Ensure sidebar background matches main screen */
+[data-testid="stSidebar"] > div {
+    background-color: #262730 !important;
+}
+
+/* Sidebar text elements - all headings */
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] h4,
+[data-testid="stSidebar"] h5,
+[data-testid="stSidebar"] h6 {
+    color: #fafafa !important;
+}
+
+/* Sidebar paragraphs and divs */
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] div,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] label {
+    color: #fafafa !important;
+}
+
+/* Streamlit widget labels */
+[data-testid="stSidebar"] .stRadio > label,
+[data-testid="stSidebar"] .stSelectbox > label,
+[data-testid="stSidebar"] .stTextInput > label,
+[data-testid="stSidebar"] .stTextArea > label,
+[data-testid="stSidebar"] .stSlider > label {
+    color: #fafafa !important;
+}
+
+/* Radio button options text */
+[data-testid="stSidebar"] .stRadio label p,
+[data-testid="stSidebar"] .stRadio label span,
+[data-testid="stSidebar"] .stRadio [class*="stRadio"] {
+    color: #fafafa !important;
+}
+
+/* Selectbox options */
+[data-testid="stSidebar"] .stSelectbox label,
+[data-testid="stSidebar"] .stSelectbox select,
+[data-testid="stSidebar"] .stSelectbox [class*="stSelectbox"] {
+    color: #fafafa !important;
+}
+
+/* Sidebar selectbox dropdown menu */
+[data-testid="stSidebar"] .stSelectbox [data-baseweb="popover"],
+[data-testid="stSidebar"] .stSelectbox [data-baseweb="popover"] > div,
+[data-testid="stSidebar"] .stSelectbox [data-baseweb="menu"] {
+    background-color: white !important;
+    color: var(--text-color) !important;
+}
+
+[data-testid="stSidebar"] .stSelectbox [data-baseweb="popover"] li,
+[data-testid="stSidebar"] .stSelectbox [data-baseweb="popover"] [role="option"],
+[data-testid="stSidebar"] .stSelectbox [data-baseweb="menu"] li,
+[data-testid="stSidebar"] .stSelectbox [data-baseweb="menu"] [role="option"] {
+    background-color: white !important;
+    color: var(--text-color) !important;
+}
+
+[data-testid="stSidebar"] .stSelectbox [data-baseweb="popover"] li:hover,
+[data-testid="stSidebar"] .stSelectbox [data-baseweb="popover"] [role="option"]:hover,
+[data-testid="stSidebar"] .stSelectbox [data-baseweb="menu"] li:hover,
+[data-testid="stSidebar"] .stSelectbox [data-baseweb="menu"] [role="option"]:hover {
+    background-color: var(--light-gray) !important;
+    color: var(--text-color) !important;
+}
+
+/* Override Streamlit's default sidebar text colors */
+[data-testid="stSidebar"] [class*="css"] {
+    color: #fafafa !important;
+}
+
+/* Ensure all sidebar text uses the same readable color as main screen */
+[data-testid="stSidebar"] * {
+    color: #fafafa !important;
+}
+
+/* Grade level icons */
+.grade-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Subject icons */
+.subject-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: #666 !important;
+}
+
+/* Expander styling */
+.stExpander {
+    background-color: var(--secondaryBackgroundColor) !important;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.stExpander label {
+    color: var(--textColor) !important;
+}
+
+.stExpander > div {
+    background-color: var(--secondaryBackgroundColor) !important;
+}
+
+.stExpander [data-testid="stExpanderContent"] {
+    background-color: var(--secondaryBackgroundColor) !important;
+    color: var(--textColor) !important;
+}
+
+/* Code blocks and pre-formatted text */
+pre,
+code,
+.stCodeBlock,
+.stCodeBlock > pre,
+.stCodeBlock code {
+    background-color: #f5f5f5 !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+pre *,
+code * {
+    color: var(--text-color) !important;
+}
+
+/* Ensure no black backgrounds anywhere */
+[style*="background-color: black"],
+[style*="background-color:#000"],
+[style*="background: black"],
+[style*="background:#000"] {
+    background-color: white !important;
+    color: var(--text-color) !important;
+}
+
+/* Fix Streamlit header/banner - the top menu bar */
+header[data-testid="stHeader"],
+[data-testid="stHeader"],
+.stApp > header,
+header {
+    background-color: var(--secondaryBackgroundColor) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Fix Streamlit header background elements */
+[data-testid="stHeader"] > div,
+header > div,
+.stApp > header > div {
+    background-color: var(--secondaryBackgroundColor) !important;
+}
+
+/* Fix Streamlit header text and elements */
+header[data-testid="stHeader"] *,
+[data-testid="stHeader"] *,
+.stApp > header *,
+header * {
+    color: var(--textColor) !important;
+}
+
+/* Fix Streamlit menu button (hamburger menu) */
+[data-testid="stHeader"] button,
+header button,
+[data-testid="stHeader"] [data-baseweb="button"],
+header [data-baseweb="button"] {
+    color: var(--textColor) !important;
+    background-color: transparent !important;
+}
+
+/* Fix Streamlit header decorations and backgrounds */
+[data-testid="stDecoration"] {
+    background-color: var(--secondaryBackgroundColor) !important;
+}
+
+/* Streamlit banner/notification area */
+.stBanner,
+.stBanner > div,
+[data-testid="stBanner"] {
+    background-color: var(--secondaryBackgroundColor) !important;
+    color: var(--textColor) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.stBanner *,
+[data-testid="stBanner"] * {
+    color: var(--textColor) !important;
+}
+
+/* Hide Streamlit default footer if needed */
+footer[data-testid="stFooter"] {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+footer[data-testid="stFooter"] * {
+    color: var(--text-color) !important;
+}
+
+/* Spinner styling */
+.stSpinner {
+    color: var(--primary-color) !important;
+}
+
+/* Override any Streamlit default white text on white background */
+* {
+    color: inherit;
+}
+
+/* Ensure all Streamlit widgets are visible */
+[class*="st"] {
+    color: #fafafa;
+}
+
+/* Comprehensive dropdown/select styling - catch all BaseWeb components - Dark theme */
+[data-baseweb="popover"] {
+    background-color: #262730 !important;
+    border: 1px solid #1f77b4 !important;
+    border-radius: 4px !important;
+}
+
+[data-baseweb="popover"],
+[data-baseweb="popover"] > div,
+[data-baseweb="popover"] > div > div {
+    background-color: #262730 !important;
+}
+
+[data-baseweb="popover"] *,
+[data-baseweb="popover"] li,
+[data-baseweb="popover"] span,
+[data-baseweb="popover"] div,
+[data-baseweb="popover"] [role="option"],
+[data-baseweb="popover"] [role="option"] * {
+    color: #fafafa !important;
+    background-color: #262730 !important;
+}
+
+[data-baseweb="menu"] {
+    background-color: #262730 !important;
+    border: 1px solid #1f77b4 !important;
+    border-radius: 4px !important;
+}
+
+[data-baseweb="menu"],
+[data-baseweb="menu"] > div,
+[data-baseweb="menu"] > ul {
+    background-color: #262730 !important;
+}
+
+[data-baseweb="menu"] *,
+[data-baseweb="menu"] li,
+[data-baseweb="menu"] span,
+[data-baseweb="menu"] div,
+[data-baseweb="menu"] [role="option"],
+[data-baseweb="menu"] [role="option"] * {
+    color: #fafafa !important;
+    background-color: #262730 !important;
+}
+
+[data-baseweb="option"] {
+    background-color: #262730 !important;
+    color: #fafafa !important;
+}
+
+[data-baseweb="option"] * {
+    color: #fafafa !important;
+}
+
+[data-baseweb="option"]:hover,
+[data-baseweb="option"]:hover * {
+    background-color: rgba(31, 119, 180, 0.3) !important;
+    color: #1f77b4 !important;
+}
+
+/* Highlighted option in dropdown - Blue */
+[data-baseweb="option"][data-highlighted="true"],
+[data-baseweb="option"][aria-selected="true"] {
+    background-color: rgba(31, 119, 180, 0.4) !important;
+    color: #1f77b4 !important;
+}
+
+/* Force dark background on all dropdown menus */
+div[role="listbox"],
+ul[role="listbox"],
+div[role="menu"],
+ul[role="menu"] {
+    background-color: #262730 !important;
+    border: 1px solid #1f77b4 !important;
+    border-radius: 4px !important;
+    color: #fafafa !important;
+}
+
+div[role="listbox"] *,
+ul[role="listbox"] *,
+div[role="menu"] *,
+ul[role="menu"] * {
+    color: #fafafa !important;
+    background-color: #262730 !important;
+}
+
+div[role="listbox"] *,
+ul[role="listbox"] *,
+div[role="menu"] *,
+ul[role="menu"] *,
+div[role="listbox"] li,
+ul[role="listbox"] li,
+div[role="menu"] li,
+ul[role="menu"] li,
+div[role="option"],
+ul[role="option"] {
+    color: #333333 !important;
+    background-color: white !important;
+}
+
+div[role="listbox"] li:hover,
+ul[role="listbox"] li:hover,
+div[role="menu"] li:hover,
+ul[role="menu"] li:hover,
+div[role="option"]:hover,
+ul[role="option"]:hover {
+    background-color: rgba(31, 119, 180, 0.3) !important;
+    color: #1f77b4 !important;
+}
+
+/* Selected option in listbox/menu - Blue */
+div[role="listbox"] li[aria-selected="true"],
+ul[role="listbox"] li[aria-selected="true"],
+div[role="menu"] li[aria-selected="true"],
+ul[role="menu"] li[aria-selected="true"],
+div[role="option"][aria-selected="true"],
+ul[role="option"][aria-selected="true"] {
+    background-color: rgba(31, 119, 180, 0.4) !important;
+    color: #1f77b4 !important;
+}
+
+/* Select element styling - Dark theme */
+select {
+    background-color: #262730 !important;
+    color: #fafafa !important;
+    border: 2px solid #1f77b4 !important;
+    border-radius: 4px !important;
+    padding: 0.5rem !important;
+}
+
+select:focus,
+select:hover {
+    border-color: #1f77b4 !important;
+    box-shadow: 0 0 0 3px rgba(31, 119, 180, 0.2) !important;
+    outline: none !important;
+    background-color: #262730 !important;
+}
+
+select option {
+    background-color: #262730 !important;
+    color: #fafafa !important;
+    padding: 0.5rem !important;
+}
+
+select option:checked,
+select option:focus,
+select option:hover {
+    background-color: rgba(31, 119, 180, 0.3) !important;
+    color: #1f77b4 !important;
+}
+
+/* Dark mode */
+.dark-mode {
+    --background-color: #262730;
+    --text-color: #FAFAFA;
+    --light-gray: #3b3b3b;
+    --border-color: #555555;
+}
+
+.dark-mode .content-card {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stTabs [data-baseweb="tab"] {
+        height: auto;
+        padding: 0.5rem;
+    }
+}
+
+/* Animation for loading */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.loading-animation {
+    animation: pulse 1.5s infinite;
+}
