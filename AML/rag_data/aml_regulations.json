@@ -1,0 +1,49 @@
+{
+    "regulations": [
+        {
+            "name": "Bank Secrecy Act (BSA)",
+            "requirements": [
+                "Maintain records of cash purchases of negotiable instruments",
+                "File reports of cash transactions exceeding $10,000",
+                "Report suspicious activity that might signify money laundering, tax evasion, or other criminal activities",
+                "Implement a Customer Identification Program (CIP)"
+            ],
+            "risk_indicators": [
+                "Transactions just below reporting thresholds",
+                "Multiple transactions in short time periods",
+                "Unusual transaction patterns",
+                "Transactions inconsistent with customer profile"
+            ]
+        },
+        {
+            "name": "USA PATRIOT Act",
+            "requirements": [
+                "Implement Customer Due Diligence (CDD) procedures",
+                "Verify customer identity",
+                "Maintain records of information used to verify identity",
+                "Check customers against government lists of known or suspected terrorists"
+            ],
+            "risk_indicators": [
+                "High-risk customers from high-risk jurisdictions",
+                "Politically Exposed Persons (PEPs)",
+                "Complex ownership structures",
+                "Unusual transaction patterns"
+            ]
+        },
+        {
+            "name": "FATF Recommendations",
+            "requirements": [
+                "Risk-based approach to AML/CFT",
+                "Customer due diligence and record-keeping",
+                "Reporting of suspicious transactions",
+                "Internal controls and compliance"
+            ],
+            "risk_indicators": [
+                "Transactions with high-risk countries",
+                "Complex or unusual transactions",
+                "Transactions with no apparent economic purpose",
+                "Transactions involving shell companies"
+            ]
+        }
+    ]
+} 

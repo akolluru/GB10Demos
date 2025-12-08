@@ -1,0 +1,127 @@
+{
+    "high_risk_countries": [
+        {
+            "name": "Iran",
+            "risk_level": "Very High",
+            "risk_factors": [
+                "International sanctions",
+                "State-sponsored terrorism",
+                "Weak AML/CFT controls",
+                "High corruption levels"
+            ],
+            "recommended_actions": [
+                "Enhanced due diligence",
+                "Transaction monitoring",
+                "Restricted business relationships",
+                "Regular risk assessment"
+            ]
+        },
+        {
+            "name": "North Korea",
+            "risk_level": "Very High",
+            "risk_factors": [
+                "International sanctions",
+                "State-sponsored cybercrime",
+                "Weak AML/CFT controls",
+                "High corruption levels"
+            ],
+            "recommended_actions": [
+                "Enhanced due diligence",
+                "Transaction monitoring",
+                "Restricted business relationships",
+                "Regular risk assessment"
+            ]
+        },
+        {
+            "name": "Syria",
+            "risk_level": "Very High",
+            "risk_factors": [
+                "International sanctions",
+                "State-sponsored terrorism",
+                "Weak AML/CFT controls",
+                "High corruption levels"
+            ],
+            "recommended_actions": [
+                "Enhanced due diligence",
+                "Transaction monitoring",
+                "Restricted business relationships",
+                "Regular risk assessment"
+            ]
+        },
+        {
+            "name": "Venezuela",
+            "risk_level": "High",
+            "risk_factors": [
+                "Economic instability",
+                "High corruption levels",
+                "Weak AML/CFT controls",
+                "State-sponsored corruption"
+            ],
+            "recommended_actions": [
+                "Enhanced due diligence",
+                "Transaction monitoring",
+                "Restricted business relationships",
+                "Regular risk assessment"
+            ]
+        },
+        {
+            "name": "Cuba",
+            "risk_level": "High",
+            "risk_factors": [
+                "International sanctions",
+                "Weak AML/CFT controls",
+                "High corruption levels",
+                "Limited financial transparency"
+            ],
+            "recommended_actions": [
+                "Enhanced due diligence",
+                "Transaction monitoring",
+                "Restricted business relationships",
+                "Regular risk assessment"
+            ]
+        }
+    ],
+    "risk_assessment_factors": {
+        "country_risk": [
+            "AML/CFT framework",
+            "Corruption levels",
+            "Political stability",
+            "Economic stability",
+            "International sanctions"
+        ],
+        "transaction_risk": [
+            "Transaction amount",
+            "Transaction frequency",
+            "Transaction purpose",
+            "Transaction pattern",
+            "Transaction parties"
+        ],
+        "customer_risk": [
+            "Customer type",
+            "Customer behavior",
+            "Customer history",
+            "Customer relationships",
+            "Customer location"
+        ]
+    },
+    "monitoring_requirements": {
+        "high_risk": [
+            "Enhanced due diligence",
+            "Regular transaction monitoring",
+            "Restricted business relationships",
+            "Regular risk assessment",
+            "Senior management approval"
+        ],
+        "medium_risk": [
+            "Standard due diligence",
+            "Regular transaction monitoring",
+            "Periodic risk assessment",
+            "Documentation review"
+        ],
+        "low_risk": [
+            "Basic due diligence",
+            "Regular transaction monitoring",
+            "Annual risk assessment"
+        ]
+    }
+} 

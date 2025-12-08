@@ -1,0 +1,151 @@
+{
+    "typologies": [
+        {
+            "name": "Structuring (Smurfing)",
+            "description": "Breaking down large transactions into smaller amounts to avoid reporting thresholds",
+            "indicators": [
+                "Multiple transactions just below reporting thresholds",
+                "Transactions in round numbers",
+                "Multiple transactions in short time periods",
+                "Transactions at different locations or branches"
+            ],
+            "risk_level": "High",
+            "detection_methods": [
+                "Pattern analysis of transaction amounts",
+                "Time-based clustering",
+                "Location-based analysis",
+                "Customer behavior profiling"
+            ]
+        },
+        {
+            "name": "Layering",
+            "description": "Complex series of transactions designed to obscure the origin of funds",
+            "indicators": [
+                "Multiple rapid transfers between accounts",
+                "Use of multiple financial institutions",
+                "Transactions with no apparent business purpose",
+                "Complex transaction chains"
+            ],
+            "risk_level": "High",
+            "detection_methods": [
+                "Network analysis of transaction flows",
+                "Velocity monitoring",
+                "Purpose analysis",
+                "Cross-institution pattern detection"
+            ]
+        },
+        {
+            "name": "Trade-Based Money Laundering",
+            "description": "Using trade transactions to disguise the movement of money",
+            "indicators": [
+                "Over/under invoicing",
+                "Multiple invoices for single shipment",
+                "Unusual trade routes",
+                "Mismatched goods descriptions"
+            ],
+            "risk_level": "Medium",
+            "detection_methods": [
+                "Price deviation analysis",
+                "Trade pattern analysis",
+                "Document verification",
+                "Counterparty risk assessment"
+            ]
+        },
+        {
+            "name": "Shell Company Abuse",
+            "description": "Using shell companies to obscure beneficial ownership and fund flows",
+            "indicators": [
+                "Companies with no physical presence",
+                "Complex ownership structures",
+                "Nominee directors",
+                "Minimal business activity"
+            ],
+            "risk_level": "High",
+            "detection_methods": [
+                "Beneficial ownership verification",
+                "Corporate structure analysis",
+                "Activity monitoring",
+                "Documentation review"
+            ]
+        },
+        {
+            "name": "PEP-Related Risks",
+            "description": "Risks associated with Politically Exposed Persons and their associates",
+            "indicators": [
+                "High-value transactions",
+                "Complex ownership structures",
+                "Transactions with high-risk jurisdictions",
+                "Unusual business relationships"
+            ],
+            "risk_level": "High",
+            "detection_methods": [
+                "PEP screening",
+                "Enhanced due diligence",
+                "Transaction monitoring",
+                "Relationship analysis"
+            ]
+        },
+        {
+            "name": "Virtual Asset Risks",
+            "description": "Money laundering risks associated with cryptocurrencies and virtual assets",
+            "indicators": [
+                "Rapid conversion between fiat and virtual assets",
+                "Use of mixing services",
+                "Transactions with unregulated exchanges",
+                "Unusual transaction patterns"
+            ],
+            "risk_level": "High",
+            "detection_methods": [
+                "Blockchain analysis",
+                "Exchange monitoring",
+                "Pattern recognition",
+                "Risk scoring"
+            ]
+        },
+        {
+            "name": "Correspondent Banking Risks",
+            "description": "Risks in cross-border banking relationships",
+            "indicators": [
+                "High-risk country transactions",
+                "Nested account relationships",
+                "Complex payment chains",
+                "Limited transparency"
+            ],
+            "risk_level": "Medium",
+            "detection_methods": [
+                "Relationship mapping",
+                "Transaction flow analysis",
+                "Country risk assessment",
+                "Due diligence review"
+            ]
+        }
+    ],
+    "risk_factors": {
+        "transaction_based": [
+            "Transaction amount",
+            "Transaction frequency",
+            "Transaction pattern",
+            "Transaction purpose",
+            "Transaction location"
+        ],
+        "customer_based": [
+            "Customer type",
+            "Customer behavior",
+            "Customer location",
+            "Customer history",
+            "Customer relationships"
+        ],
+        "product_based": [
+            "Product type",
+            "Product features",
+            "Product usage",
+            "Product risk level"
+        ],
+        "channel_based": [
+            "Channel type",
+            "Channel location",
+            "Channel usage",
+            "Channel risk level"
+        ]
+    }
+} 
