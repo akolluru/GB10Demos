@@ -1,0 +1,11 @@
+streamlit
+crewai
+crewai-tools
+ollama
+python-dotenv
+pydantic
+graphviz
+pandas
+httpx
+litellm
+
